@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hurufku Store</title>
+    <link rel="stylesheet" href="style.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h2>Hurufku</h2>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Produk</a>
+            <a href="#">Kontak</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>Custom <span>Resin Premium</span></h1>
+        <p>Buat huruf dan nama sesuai keinginanmu</p>
+        <button>Beli Sekarang</button>
+    </section>
+
+    <!-- PRODUK SECTION -->
+    <section class="produk">
+   <h2>Produk Terbaru</h2>
+
+   <div class="container">
+      <div class="card">
+         <img src="Pj.jpg">
+         <h3>Huruf Resin A</h3>
+         <p>Rp20.000</p>
+         <button class="btn beli" 
+data-produk="Huruf Resin A"
+data-harga="20000">
+Beli
+</button>
+      </div>
+
+      <div class="card">
+         <img src="Pj.jpg">
+         <h3>Huruf Resin B</h3>
+         <p>Rp20.000</p>
+         <button class="btn beli" 
+data-produk="Huruf Resin B"
+data-harga="20000">
+Beli
+</button>
+      </div>
+
+      <div class="card">
+         <img src="Pj.jpg">
+         <h3>Huruf Resin C</h3>
+         <p>Rp20.000</p>
+         <button class="btn beli" 
+data-produk="Huruf Resin C"
+data-harga="20000">
+Beli
+</button>
+      </div>
+      <div class="card">
+         <img src="Pj.jpg">
+         <h3>Huruf D</h3>
+         <p>Rp25.000</p>
+         <button class="btn beli" 
+data-produk="Huruf Resin D"
+data-harga="25000">
+Beli
+</button>
+      </div>
+   </div>
+</section>
+<section class="laris">
+   <h2>Produk laris</h2>
+   <div class="container-grid">
+      <div class="card"
+  data-aos="fade-up">
+         <img src="Pj.jpg">
+         <h3>Huruf Resin A</h3>
+         <p>Rp20.000</p>
+      </div>
+
+      <div class="card" 
+  data-aos="fade-up">
+         <img src="Pj.jpg">
+         <h3>Huruf Resin B</h3>
+         <p>Rp20.000</p>
+      </div>
+
+      <div class="card"
+  data-aos="fade-up">
+         <img src="Pj.jpg">
+         <h3>Gantungan Nama</h3>
+         <p>Rp25.000</p>
+      </div>
+   </div>
+   </section>
+ <!-- FOOTER -->
+<footer>
+   <p>© 2026 Hurufku Store | All Rights Reserved</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init();
+
+const tombolBeli = document.querySelectorAll(".beli");
+
+tombolBeli.forEach(function(tombol) {
+   tombol.addEventListener("click", function() {
+
+      const namaProduk = this.getAttribute("data-produk");
+      const harga = this.getAttribute("data-harga");
+
+      let jumlah = prompt("Masukkan jumlah pesanan:");
+      if (jumlah === null || jumlah === "" || isNaN(jumlah)) {
+         alert("Jumlah tidak valid");
+         return;
+      }
+
+      const total = harga * jumlah;
+
+      const noWA = "6282345577334"; // GANTI NOMOR KAMU
+
+      const pesan = 
+`Halo, saya ingin pesan:
+
+Produk : ${namaProduk}
+Harga  : Rp${harga}
+Jumlah : ${jumlah}
+Total  : Rp${total}
+
+Apakah masih tersedia?`;
+
+      const url = `https://wa.me/${noWA}?text=${encodeURIComponent(pesan)}`;
+
+      window.open(url, "_blank");
+
+   });
+});
+</script>
+</body>
+</html>

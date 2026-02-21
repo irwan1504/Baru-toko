@@ -1,0 +1,229 @@
+/* ===== Umum ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f7;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h2 {
+    margin: 0;
+    color: #ff6600;
+}
+
+header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    color: #ff6600;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #ff8c00, #ffa500);
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 12px 25px;
+    background: #fff;
+    color: #ff6600;
+    font-weight: 700;
+    border-radius: 25px;
+}
+
+.hero button:hover {
+    background: #ffd699;
+}
+
+/* ===== PRODUK ===== */
+.produk, .laris {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produk h2, .laris h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ff6600;
+}
+
+.container, .container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.card p {
+    color: #555;
+}
+
+.card button {
+    padding: 8px 15px;
+    background: #ff6600;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 25px;
+}
+
+.card button:hover {
+    background: #ff8533;
+}
+
+/* ===== KERANJANG MODERN ===== */
+.keranjang {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+    border-left: 5px solid #ff6600;
+}
+
+.keranjang.active { right: 0; }
+
+.keranjang-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.keranjang-header h3 {
+    margin: 0;
+    color: #ff6600;
+}
+
+#tutup-keranjang {
+    cursor: pointer;
+    font-size: 22px;
+    color: #333;
+}
+
+#list-keranjang li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+}
+
+.kontrol-jumlah {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.kontrol-jumlah button {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: none;
+    background: #ff6600;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.kontrol-hapus {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+#checkout {
+    width: 100%;
+    padding: 12px;
+    background: #ff6600;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-top: 15px;
+}
+
+#checkout:hover {
+    background: #ff8533;
+}
+
+p {
+    font-weight: 500;
+}
